@@ -7,8 +7,8 @@ machine:
   environment:
     DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
 
-    deployment:
-  production:
-    branch: clean-errors-for-CLI
+  deployment:
+    staging:
+      branch: clean-errors-for-CLI
     heroku:
       appname: rufus-palette-picker
