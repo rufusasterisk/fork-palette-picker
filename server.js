@@ -15,6 +15,16 @@ app.use(express.static(__dirname + '/public'));
 
 app.set('port', process.env.PORT || 3002);
 
+const requireHTTPS = (request, response, next) => {
+  if (request.header('x-forwarded-proto') !== 'https') {
+    return (
+      response.rediirect(`https://${request.header}('host')}${request.url}`));
+  }
+  next();
+};
+
+if (process.env.NODE_ENV === 'production') { app.use(requireHTTPS); }
+
 app.listen(app.get('port'), () => {
   // eslint-disable-next-line no-console
   console.log(`${app.locals.title} is running on port ${app.get('port')}.`);
