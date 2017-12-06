@@ -1,0 +1,30 @@
+{
+  "short_name": "Palette Picker",
+  "name": "Your Favorite Palette Picker",
+  "background_color": "#dcaffd",
+  "theme_color": "#74c7fd",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "images/48.jpeg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "images/96.jpeg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/192.jpeg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/512.jpeg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html?launcher=true"
+}
